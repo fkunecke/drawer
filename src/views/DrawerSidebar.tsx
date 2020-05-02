@@ -55,6 +55,15 @@ class DrawerSidebar extends React.PureComponent<Props> {
     return route.routeName;
   };
 
+  private getTestID = ({ focused, tintColor, route }: Scene) => {
+    const { testID } = this.getScreenOptions(route.key);
+    if (testID) {
+      return testID;
+    }
+
+    return null;
+  };
+
   private renderIcon = ({ focused, tintColor, route }: Scene) => {
     const { drawerIcon } = this.getScreenOptions(route.key);
     if (drawerIcon) {
@@ -109,6 +118,7 @@ class DrawerSidebar extends React.PureComponent<Props> {
           }
           screenProps={this.props.screenProps}
           getLabel={this.getLabel}
+          getTestID={this.getTestID}
           renderIcon={this.renderIcon}
           onItemPress={this.handleItemPress}
           drawerPosition={this.props.drawerPosition}

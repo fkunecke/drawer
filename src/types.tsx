@@ -95,6 +95,7 @@ export type DrawerNavigatorItemsProps = {
   inactiveTintColor?: string | ThemedColor;
   inactiveBackgroundColor?: string | ThemedColor;
   getLabel: (scene: Scene) => React.ReactNode;
+  getTestID: (scene: Scene) => React.ReactNode;
   renderIcon: (scene: Scene) => React.ReactNode;
   onItemPress: (scene: { route: NavigationRoute; focused: boolean }) => void;
   itemsContainerStyle?: StyleProp<ViewStyle>;
