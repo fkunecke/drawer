@@ -45,6 +45,7 @@ export type DrawerLabelProps = {
 
 export type NavigationDrawerOptions = {
   title?: string;
+  testID?: string;
   drawerLabel?:
     | React.ReactNode
     | ((props: DrawerLabelProps) => React.ReactNode);
@@ -95,7 +96,7 @@ export type DrawerNavigatorItemsProps = {
   inactiveTintColor?: string | ThemedColor;
   inactiveBackgroundColor?: string | ThemedColor;
   getLabel: (scene: Scene) => React.ReactNode;
-  getTestID: (scene: Scene) => React.ReactNode;
+  getTestID: (scene: Scene) => string | undefined;
   renderIcon: (scene: Scene) => React.ReactNode;
   onItemPress: (scene: { route: NavigationRoute; focused: boolean }) => void;
   itemsContainerStyle?: StyleProp<ViewStyle>;

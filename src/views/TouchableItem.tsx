@@ -52,7 +52,7 @@ export default class TouchableItem extends React.Component<Props> {
             this.props.borderless
           )}
         >
-          <View testID={this.props.testID} style={style}>{React.Children.only(this.props.children)}</View>
+          <View style={style}>{React.Children.only(this.props.children)}</View>
         </TouchableNativeFeedback>
       );
     }

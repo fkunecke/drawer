@@ -55,7 +55,7 @@ class DrawerSidebar extends React.PureComponent<Props> {
     return route.routeName;
   };
 
-  private getTestID = ({ focused, tintColor, route }: Scene) => {
+  private getTestID = ({ route }: Scene) => {
     const { testID } = this.getScreenOptions(route.key);
     if (testID) {
       return testID;
