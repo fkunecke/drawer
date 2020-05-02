@@ -61,7 +61,7 @@ class DrawerSidebar extends React.PureComponent<Props> {
       return testID;
     }
 
-    return null;
+    return undefined;
   };
 
   private renderIcon = ({ focused, tintColor, route }: Scene) => {
