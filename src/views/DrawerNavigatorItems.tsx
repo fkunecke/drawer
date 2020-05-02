@@ -109,6 +109,7 @@ export default class DrawerNavigatorItems extends React.Component<
           const scene = { route, index, focused, tintColor: color };
           const icon = renderIcon(scene);
           const label = getLabel(scene);
+          const testID = getTestID(scene);
           const accessibilityLabel =
             typeof label === 'string' ? label : undefined;
           const extraLabelStyle = focused
@@ -118,6 +119,7 @@ export default class DrawerNavigatorItems extends React.Component<
             <TouchableItem
               key={route.key}
               accessible
+              testID={testID}
               accessibilityLabel={accessibilityLabel}
               onPress={() => {
                 onItemPress({ route, focused });
